@@ -1,2 +1,12 @@
-fastapi>=0.115.0
-uvicorn>=0.32.0
+fastapi==0.139.0
+uvicorn==0.50.0
+sqlalchemy==2.0.51
+psycopg2-binary==2.9.12
+alembic==1.18.5
+python-dotenv==1.2.2
+python-multipart==0.0.20
+pytesseract==0.3.13
+Pillow==11.1.0
+python-jose[cryptography]==3.5.0
+passlib[bcrypt]==1.7.4
+reportlab==4.4.0

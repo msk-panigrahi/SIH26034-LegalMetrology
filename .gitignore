@@ -1,0 +1,104 @@
+# =============================================================================
+# SIH26034 — Legal MetriX Packaged Commodity Compliance System
+# Root .gitignore
+# =============================================================================
+
+# ---------------------
+# Dependencies
+# ---------------------
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ---------------------
+# Build outputs
+# ---------------------
+frontend/dist/
+frontend/build/
+*.tsbuildinfo
+
+# ---------------------
+# Python
+# ---------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+dist/
+build/
+*.whl
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# ---------------------
+# Environment & secrets
+# ---------------------
+.env
+.env.*
+!.env.example
+
+# ---------------------
+# PostgreSQL
+# ---------------------
+*.sql.gz
+pgdata/
+
+# ---------------------
+# IDE / Editor
+# ---------------------
+# VS Code
+.vscode/*
+!.vscode/extensions.json
+
+# JetBrains (PyCharm, WebStorm, IntelliJ)
+.idea/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim / Neovim
+*.swp
+*.swo
+*~
+tags
+
+# ---------------------
+# OS files
+# ---------------------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+._*
+
+# ---------------------
+# Logs & temp
+# ---------------------
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+uvicorn.log
+celerybeat.pid
+
+# ---------------------
+# Misc
+# ---------------------
+*.local
+.cache/
+coverage/
+.nyc_output/
+
+# Generated reports
+backend/storage/
+server.log

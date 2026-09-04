@@ -1,0 +1,263 @@
+.inspection-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+.inspection-page h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-h);
+  margin-bottom: 8px;
+}
+
+.inspection-page .page-desc {
+  font-size: 15px;
+  color: var(--text);
+  margin-bottom: 32px;
+}
+
+/* ---- Form ---- */
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-row label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.form-row input[type="text"],
+.form-row select,
+.form-row textarea {
+  padding: 10px 14px;
+  font-size: 15px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card-bg);
+  color: var(--text-h);
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.form-row input[type="text"]:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+  border-color: #6366f1;
+}
+
+.form-row textarea {
+  resize: vertical;
+  min-height: 80px;
+  font-family: inherit;
+}
+
+.form-row-inline {
+  display: flex;
+  gap: 16px;
+}
+
+.form-row-inline .form-row {
+  flex: 1;
+}
+
+/* ---- Image Drop Zone ---- */
+
+.dropzone {
+  border: 2px dashed var(--border);
+  border-radius: 12px;
+  padding: 40px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  background: var(--card-bg);
+}
+
+.dropzone:hover,
+.dropzone.dragover {
+  border-color: #6366f1;
+  background: rgba(99, 102, 241, 0.04);
+}
+
+.dropzone-icon {
+  font-size: 40px;
+  margin-bottom: 8px;
+}
+
+.dropzone-text {
+  font-size: 15px;
+  color: var(--text);
+}
+
+.dropzone-text strong {
+  color: #6366f1;
+}
+
+.dropzone-hint {
+  font-size: 12px;
+  color: var(--text);
+  margin-top: 6px;
+}
+
+/* ---- Image Preview ---- */
+
+.image-preview-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.image-preview {
+  max-width: 100%;
+  max-height: 320px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  object-fit: contain;
+}
+
+.remove-image-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+.remove-image-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* ---- Submit Button ---- */
+
+.submit-btn {
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: #6366f1;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #4f46e5;
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ---- Messages ---- */
+
+.message {
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.message.success {
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.message.error {
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+/* ---- Result Card ---- */
+
+.result-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.result-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-h);
+  margin-bottom: 16px;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 24px;
+}
+
+.result-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.result-item .label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text);
+}
+
+.result-item .value {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+/* ---- Spinner ---- */
+
+.spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
